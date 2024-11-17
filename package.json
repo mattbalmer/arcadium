@@ -1,9 +1,9 @@
 {
   "name": "@mattbalmer/arcadium",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "scripts": {
-    "start": "./start.sh",
-    "build": "./build.sh",
+    "start": "NODE_PATH=source WATCH=true concurrently \"webpack\" \"gulp compile\"",
+    "build": "NODE_PATH=source WATCH=false concurrently \"webpack\" \"gulp compile\"",
     "serve": "live-server --port=3000 --no-browser dist/"
   },
   "resolutions": {
