@@ -2,7 +2,7 @@ import '@client/debug';
 import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { AppComponent } from '@client/components/pages/AppComponent';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 
 const USE_STRICT_MODE = false;
 
@@ -12,13 +12,13 @@ const root = createRoot(container!);
 root.render(<>
   {USE_STRICT_MODE ?
     <React.StrictMode>
-      <BrowserRouter>
+      <HashRouter>
         <AppComponent/>
-      </BrowserRouter>
+      </HashRouter>
     </React.StrictMode>
   :
-    <BrowserRouter>
+    <HashRouter>
       <AppComponent/>
-    </BrowserRouter>
+    </HashRouter>
   }
 </>);
